@@ -26,7 +26,7 @@
 
         main {
             text-align: center;
-            max-width: 500px;
+            max-width: 600px;
         }
 
         h1 {
@@ -40,6 +40,130 @@
             font-size: 1.1rem;
             color: #666;
             margin-bottom: 2rem;
+        }
+
+        .apps {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .app-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .app-name {
+            font-size: 0.85rem;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .ghost .app-name {
+            color: #bbb;
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .app-icon:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .app-icon.active {
+            transform: scale(1.05);
+            box-shadow: 0 0 0 3px #007AFF, 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .ghost-icon {
+            background: #e8e8e8;
+            border: 2px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: default;
+            box-shadow: none;
+        }
+
+        .ghost-icon:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
+        .ghost-icon span {
+            font-size: 2rem;
+            color: #bbb;
+        }
+
+        .app-detail {
+            display: none;
+            background: #fff;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: left;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .app-detail.visible {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .app-detail h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #111;
+        }
+
+        .app-detail p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .app-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .app-links a {
+            font-size: 0.9rem;
+            color: #007AFF;
+            text-decoration: none;
+        }
+
+        .app-links a:hover {
+            text-decoration: underline;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: #888;
+            cursor: pointer;
+            float: right;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        .close-btn:hover {
+            color: #333;
         }
 
         .contact {
@@ -64,9 +188,72 @@
     <main>
         <h1>⚡️</h1>
         <h1>doohyper</h1>
-        <p>We create apps.</p>
+        <p>our apps</p>
+
+        <div class="apps">
+            <div class="app-item">
+                <svg class="app-icon" id="app1" onclick="toggleApp('kleaner')" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                    <path d="M1024 0H0V1024H1024V0Z" fill="url(#paint0)"/>
+                    <g opacity="0.5">
+                    <path d="M511 982C772.231 982 984 771.574 984 512C984 252.426 772.231 42 511 42C249.769 42 38 252.426 38 512C38 771.574 249.769 982 511 982Z" stroke="white" stroke-opacity="0.18" stroke-width="6"/>
+                    <path d="M511 916.722C735.949 916.722 918.305 735.522 918.305 512C918.305 288.478 735.949 107.278 511 107.278C286.051 107.278 103.694 288.478 103.694 512C103.694 735.522 286.051 916.722 511 916.722Z" stroke="white" stroke-opacity="0.16" stroke-width="6"/>
+                    <path d="M511 851.444C699.667 851.444 852.611 699.47 852.611 512C852.611 324.53 699.667 172.556 511 172.556C322.333 172.556 169.389 324.53 169.389 512C169.389 699.47 322.333 851.444 511 851.444Z" stroke="white" stroke-opacity="0.14" stroke-width="6"/>
+                    <path d="M511 786.167C663.385 786.167 786.917 663.418 786.917 512C786.917 360.582 663.385 237.833 511 237.833C358.615 237.833 235.083 360.582 235.083 512C235.083 663.418 358.615 786.167 511 786.167Z" stroke="white" stroke-opacity="0.12" stroke-width="6"/>
+                    <path d="M511 720.889C627.103 720.889 721.222 627.366 721.222 512C721.222 396.634 627.103 303.111 511 303.111C394.898 303.111 300.778 396.634 300.778 512C300.778 627.366 394.898 720.889 511 720.889Z" stroke="white" stroke-opacity="0.1" stroke-width="6"/>
+                    </g>
+                    <path d="M473.561 258.85L185.726 335.975C148.322 345.998 126.125 384.444 136.147 421.848L235.956 794.341C245.979 831.745 284.425 853.942 321.829 843.919L609.664 766.794C647.068 756.772 669.265 718.325 659.243 680.921L559.434 308.429C549.412 271.025 510.965 248.828 473.561 258.85Z" fill="white" fill-opacity="0.3"/>
+                    <path d="M834.739 237.533L543.262 175.578C505.384 167.527 468.152 191.706 460.101 229.583L379.923 606.788C371.872 644.666 396.051 681.898 433.929 689.949L725.406 751.904C763.283 759.955 800.515 735.776 808.566 697.899L888.744 320.694C896.795 282.816 872.616 245.584 834.739 237.533Z" fill="white" fill-opacity="0.5"/>
+                    <path d="M684.728 231.485H373.593C332.449 231.485 299.096 264.839 299.096 305.982V709.144C299.096 750.287 332.449 783.641 373.593 783.641H684.728C725.872 783.641 759.226 750.287 759.226 709.144V305.982C759.226 264.839 725.872 231.485 684.728 231.485Z" fill="white"/>
+                    </g>
+                    <defs>
+                    <linearGradient id="paint0" x1="220" y1="180" x2="860" y2="860" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#58B7FF"/>
+                    <stop offset="0.55" stop-color="#6B63FF"/>
+                    <stop offset="1" stop-color="#E85BFF"/>
+                    </linearGradient>
+                    <clipPath id="clip0">
+                    <rect width="1024" height="1024" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                <span class="app-name">Kleaner</span>
+            </div>
+            <div class="app-item ghost">
+                <div class="app-icon ghost-icon">
+                    <span>+</span>
+                </div>
+                <span class="app-name">More soon</span>
+            </div>
+        </div>
+
+        <div class="app-detail" id="kleaner">
+            <button class="close-btn" onclick="toggleApp('kleaner')">&times;</button>
+            <h2>Kleaner</h2>
+            <p>Just another photo cleaner app. Coming soon.</p>
+            <div class="app-links">
+                <a href="privacy.html">Privacy Policy & Terms</a>
+                <a href="support.html">Support</a>
+            </div>
+        </div>
+
         <p class="contact">Contact us <a href="mailto:services@doohoo.me">here</a></p>
     </main>
     <footer>&copy; 2025 doohyper/doohoo</footer>
+
+    <script>
+        function toggleApp(appId) {
+            const detail = document.getElementById(appId);
+            const icon = document.getElementById('app1');
+            
+            if (detail.classList.contains('visible')) {
+                detail.classList.remove('visible');
+                icon.classList.remove('active');
+            } else {
+                detail.classList.add('visible');
+                icon.classList.add('active');
+            }
+        }
+    </script>
 </body>
 </html>
