@@ -96,7 +96,7 @@ Any disputes shall be resolved exclusively in the courts of Sweden.
 
 For questions about these Terms, contact:
 
-**Email:** apps@doohyper.com
+**Email:** support@doohyper.com
 
 ---
 
